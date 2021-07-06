@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/layouts/Header'
+import Sidebar from './components/layouts/Sidebar'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscriptions from './pages/Subscriptions'
+import Channel from './pages/Channel'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Sidebar />
+        <div id="content" className="p-4 ml-24 overflow-y-scroll">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/explore" component={Explore} />
+            <Route path="/subscriptions" component={Subscriptions} />
+            <Route path="/channel" component={Channel} />
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
