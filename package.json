@@ -1,6 +1,7 @@
 {
-  "name": "myreact",
-  "version": "0.1.0",
+  "name": "youtube-react-react",
+  "description": "Learning react with react",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
