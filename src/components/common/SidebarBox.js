@@ -15,7 +15,7 @@ const SidebarBox = ({title, menu, limit }) => {
     <div className="sidebar-box py-3">
       { title && <h4 className="section-title px-5 py-1 text-sm">{title}</h4> }
       {items.map((item, index) => (
-        <Link to={item.link}>
+        <Link to={item.link} key={item.name}>
           <div className="sidebar-item flex cursor-pointer items-center px-5 py-2 hover:menu-active" key={index+item.name}>
             {item.icon}
             <p className="font-thin	text-sm flex-1 truncate">{item.name}</p>

@@ -1,5 +1,4 @@
-const Subscriptions = () => { //Functional Component
-
+const Subscriptions = () => {
   return (
     <div>
       <h1>Subscriptions</h1>

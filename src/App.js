@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Header />
         <Sidebar />
-        <div id="content" className="p-4 ml-24 overflow-y-scroll">
+        <div id="content" className="p-4 ml-20 overflow-y-scroll">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/explore" component={Explore} />
